@@ -1,0 +1,683 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tanova Kitchen â€“ Homepage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+
+  <!-- ============================================================
+       MAIN NAVIGATION
+  ============================================================ -->
+  <nav class="main-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+
+      <a href="#" class="nav-logo" aria-label="Tanova Kitchen home">
+        <!-- Pill container with gradient background so the logo mark pops -->
+        <div class="nav-logo-pill">
+          <div class="nav-logo-icon">
+            <img src="images/My Logo.png" alt="" aria-hidden="true" />
+          </div>
+          <div class="nav-logo-text">
+            <span class="nav-logo-name">Tanova</span>
+            <span class="nav-logo-sub">Kitchen</span>
+          </div>
+        </div>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#products">Products</a></li>
+        <li><a href="#brands">Brands</a></li>
+        <li><a href="#magazine">Magazine</a></li>
+        <li><a href="#offers">Offers &amp; Promos</a></li>
+        <li><a href="#about">Company</a></li>
+        <li><a href="#careers">Careers</a></li>
+        <li><a href="#trade">Trade</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO MARQUEE CAROUSEL
+       Cards scroll continuously left (marquee / ticker style).
+       The track holds 2 identical sets of cards so the loop is
+       seamless. JS pauses on hover, handles drag-to-scrub, and
+       syncs the dot indicator to whichever card is most centred.
+  ============================================================ -->
+  <section class="hero-carousel" aria-label="Homepage highlights">
+
+    <!-- Left / right gradient edge fades -->
+    <div class="marquee-fade marquee-fade--left"  aria-hidden="true"></div>
+    <div class="marquee-fade marquee-fade--right" aria-hidden="true"></div>
+
+    <!-- The outer viewport clips the scrolling track -->
+    <div class="marquee-viewport" id="marqueeViewport">
+
+      <!-- The track holds 2 copies of all cards (seamless loop) -->
+      <div class="marquee-track" id="marqueeTrack">
+
+        <!-- â”€â”€â”€ SET A (originals) â”€â”€â”€ -->
+        <div class="mq-card" data-index="0">
+          <img class="mq-img"
+            src="images/slide-1.jpg"
+            alt="Fresh milk and breakfast spread" />
+          <div class="mq-overlay"></div>
+          <div class="mq-content">
+            <div class="mq-brand">
+              <img src="images/My Logo.png" alt="" aria-hidden="true" class="mq-logo" />
+              <div class="mq-brand-text">
+                <span class="mq-brand-name">Tanova</span>
+                <span class="mq-brand-sub">Kitchen</span>
+              </div>
+            </div>
+            <p class="mq-tag">New Arrival</p>
+            <h2 class="mq-heading">Pure &amp; Fresh<br>Every Morning</h2>
+            <a href="#products" class="slide-btn">Discover More</a>
+          </div>
+        </div>
+
+        <div class="mq-card" data-index="1">
+          <img class="mq-img"
+            src="images/slide-2.jpg"
+            alt="Orange juice and healthy breakfast" />
+          <div class="mq-overlay"></div>
+          <div class="mq-content">
+            <div class="mq-brand">
+              <img src="images/My Logo.png" alt="" aria-hidden="true" class="mq-logo" />
+              <div class="mq-brand-text">
+                <span class="mq-brand-name">Tanova</span>
+                <span class="mq-brand-sub">Kitchen</span>
+              </div>
+            </div>
+            <p class="mq-tag">Health &amp; Wellness</p>
+            <h2 class="mq-heading">Naturally Full<br>of Vitamins</h2>
+            <a href="#products" class="slide-btn">Explore Now</a>
+          </div>
+        </div>
+
+        <div class="mq-card" data-index="2">
+          <img class="mq-img"
+            src="images/slide-3.jpg"
+            alt="Yogurt and fresh berries" />
+          <div class="mq-overlay"></div>
+          <div class="mq-content">
+            <div class="mq-brand">
+              <img src="images/My Logo.png" alt="" aria-hidden="true" class="mq-logo" />
+              <div class="mq-brand-text">
+                <span class="mq-brand-name">Tanova</span>
+                <span class="mq-brand-sub">Kitchen</span>
+              </div>
+            </div>
+            <p class="mq-tag">Family Favourite</p>
+            <h2 class="mq-heading">Light on Calories,<br>Big on Taste</h2>
+            <a href="#products" class="slide-btn">See Products</a>
+          </div>
+        </div>
+
+        <div class="mq-card" data-index="3">
+          <img class="mq-img"
+            src="images/slide-4.jpg"
+            alt="Cheese and dairy platter" />
+          <div class="mq-overlay"></div>
+          <div class="mq-content">
+            <div class="mq-brand">
+              <img src="images/My Logo.png" alt="" aria-hidden="true" class="mq-logo" />
+              <div class="mq-brand-text">
+                <span class="mq-brand-name">Tanova</span>
+                <span class="mq-brand-sub">Kitchen</span>
+              </div>
+            </div>
+            <p class="mq-tag">Premium Range</p>
+            <h2 class="mq-heading">Crafted with<br>Tradition</h2>
+            <a href="#products" class="slide-btn">Learn More</a>
+          </div>
+        </div>
+
+        <!-- â”€â”€â”€ SET B (clones for seamless loop â€“ aria-hidden) â”€â”€â”€ -->
+        <div class="mq-card mq-clone" aria-hidden="true" data-index="0">
+          <img class="mq-img" src="images/slide-1.jpg" alt=""/>
+          <div class="mq-overlay"></div>
+          <div class="mq-content">
+            <div class="mq-brand"><img src="images/My Logo.png" alt="" aria-hidden="true" class="mq-logo"/><div class="mq-brand-text"><span class="mq-brand-name">Tanova</span><span class="mq-brand-sub">Kitchen</span></div></div>
+            <p class="mq-tag">New Arrival</p>
+            <h2 class="mq-heading">Pure &amp; Fresh<br>Every Morning</h2>
+            <a href="#products" class="slide-btn">Discover More</a>
+          </div>
+        </div>
+
+        <div class="mq-card mq-clone" aria-hidden="true" data-index="1">
+          <img class="mq-img" src="images/slide-2.jpg" alt=""/>
+          <div class="mq-overlay"></div>
+          <div class="mq-content">
+            <div class="mq-brand"><img src="images/My Logo.png" alt="" aria-hidden="true" class="mq-logo"/><div class="mq-brand-text"><span class="mq-brand-name">Tanova</span><span class="mq-brand-sub">Kitchen</span></div></div>
+            <p class="mq-tag">Health &amp; Wellness</p>
+            <h2 class="mq-heading">Naturally Full<br>of Vitamins</h2>
+            <a href="#products" class="slide-btn">Explore Now</a>
+          </div>
+        </div>
+
+        <div class="mq-card mq-clone" aria-hidden="true" data-index="2">
+          <img class="mq-img" src="images/slide-3.jpg" alt=""/>
+          <div class="mq-overlay"></div>
+          <div class="mq-content">
+            <div class="mq-brand"><img src="images/My Logo.png" alt="" aria-hidden="true" class="mq-logo"/><div class="mq-brand-text"><span class="mq-brand-name">Tanova</span><span class="mq-brand-sub">Kitchen</span></div></div>
+            <p class="mq-tag">Family Favourite</p>
+            <h2 class="mq-heading">Light on Calories,<br>Big on Taste</h2>
+            <a href="#products" class="slide-btn">See Products</a>
+          </div>
+        </div>
+
+        <div class="mq-card mq-clone" aria-hidden="true" data-index="3">
+          <img class="mq-img" src="images/slide-4.jpg" alt=""/>
+          <div class="mq-overlay"></div>
+          <div class="mq-content">
+            <div class="mq-brand"><img src="images/My Logo.png" alt="" aria-hidden="true" class="mq-logo"/><div class="mq-brand-text"><span class="mq-brand-name">Tanova</span><span class="mq-brand-sub">Kitchen</span></div></div>
+            <p class="mq-tag">Premium Range</p>
+            <h2 class="mq-heading">Crafted with<br>Tradition</h2>
+            <a href="#products" class="slide-btn">Learn More</a>
+          </div>
+        </div>
+
+      </div><!-- /.marquee-track -->
+    </div><!-- /.marquee-viewport -->
+
+    <!-- Prev / Next nudge buttons -->
+    <button class="carousel-arrow arrow-prev" id="arrowPrev" aria-label="Previous slide">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+        <polyline points="15 18 9 12 15 6"/>
+      </svg>
+    </button>
+    <button class="carousel-arrow arrow-next" id="arrowNext" aria-label="Next slide">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+        <polyline points="9 18 15 12 9 6"/>
+      </svg>
+    </button>
+
+  
+
+    <!-- Dot indicators (synced by JS to the centred card) -->
+    <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Slide indicators">
+      <button class="dot active" role="tab" aria-selected="true"  aria-label="Slide 1" data-target="0"></button>
+      <button class="dot"        role="tab" aria-selected="false" aria-label="Slide 2" data-target="1"></button>
+      <button class="dot"        role="tab" aria-selected="false" aria-label="Slide 3" data-target="2"></button>
+      <button class="dot"        role="tab" aria-selected="false" aria-label="Slide 4" data-target="3"></button>
+    </div>
+
+    <!-- Wave -->
+    <div class="carousel-wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,45 C240,90 480,0 720,45 C960,90 1200,0 1440,45 L1440,90 L0,90 Z" fill="#f8fafc"/>
+      </svg>
+    </div>
+
+  </section><!-- /.hero-carousel -->
+
+  <!-- ============================================================
+       QUICK-LINKS BAR
+  ============================================================ -->
+  <section class="quick-links" aria-label="Quick links">
+    <div class="quick-links-inner">
+
+      <a href="#products" class="quick-link-tile">
+        <div class="tile-icon">
+          <!-- Bottle SVG -->
+          <svg viewBox="0 0 48 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="14" y="0" width="20" height="10" rx="3" fill="#1a6ab1"/>
+            <rect x="8"  y="10" width="32" height="60" rx="10" fill="#dce8f7"/>
+            <rect x="12" y="22" width="24" height="8" rx="2" fill="#1a6ab1" opacity=".25"/>
+            <circle cx="24" cy="48" r="8" fill="#1a6ab1" opacity=".12"/>
+            <text x="24" y="51" text-anchor="middle" font-size="7" fill="#1a6ab1" font-family="sans-serif" font-weight="bold">FRESH</text>
+          </svg>
+        </div>
+        <div class="tile-text">
+          <span class="tile-label">Products</span>
+          <span class="tile-sub">Browse our range</span>
+        </div>
+        <svg class="tile-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <polyline points="9 18 15 12 9 6"/>
+        </svg>
+      </a>
+
+      <a href="#offers" class="quick-link-tile">
+        <div class="tile-icon">
+          <!-- Gift SVG -->
+          <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="5"  y="22" width="50" height="8"  rx="4" fill="#1a6ab1"/>
+            <rect x="10" y="30" width="40" height="24" rx="3" fill="#dce8f7"/>
+            <line x1="30" y1="22" x2="30" y2="54" stroke="#1a6ab1" stroke-width="3"/>
+            <path d="M30 22 Q20 10 14 16 Q8 22 30 22" fill="#ef4723"/>
+            <path d="M30 22 Q40 10 46 16 Q52 22 30 22" fill="#f7c948"/>
+            <line x1="10" y1="30" x2="50" y2="30" stroke="#1a6ab1" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="tile-text">
+          <span class="tile-label">Offers &amp; Promos</span>
+          <span class="tile-sub">Current deals</span>
+        </div>
+        <svg class="tile-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <polyline points="9 18 15 12 9 6"/>
+        </svg>
+      </a>
+
+      <a href="#magazine" class="quick-link-tile">
+        <div class="tile-icon">
+          <!-- Magazine/book SVG -->
+          <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="8"  y="6"  width="44" height="48" rx="5" fill="#dce8f7"/>
+            <rect x="8"  y="6"  width="8"  height="48" rx="3" fill="#1a6ab1" opacity=".35"/>
+            <rect x="20" y="16" width="24" height="3"  rx="1.5" fill="#1a6ab1" opacity=".5"/>
+            <rect x="20" y="23" width="18" height="3"  rx="1.5" fill="#1a6ab1" opacity=".35"/>
+            <rect x="20" y="30" width="22" height="3"  rx="1.5" fill="#1a6ab1" opacity=".35"/>
+            <rect x="20" y="37" width="16" height="3"  rx="1.5" fill="#1a6ab1" opacity=".35"/>
+          </svg>
+        </div>
+        <div class="tile-text">
+          <span class="tile-label">Magazine</span>
+          <span class="tile-sub">Recipes &amp; tips</span>
+        </div>
+        <svg class="tile-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <polyline points="9 18 15 12 9 6"/>
+        </svg>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FEATURED PRODUCTS
+  ============================================================ -->
+  <section class="section products-section" id="products">
+    <div class="container">
+
+      <div class="section-header">
+        <div>
+          <p class="section-eyebrow">Our Range</p>
+          <h2 class="section-title">Featured Products</h2>
+        </div>
+        <a href="#" class="btn-outline">View All Products</a>
+      </div>
+
+      <div class="products-grid">
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img
+              src="images/slide-4.jpg"
+              alt="Whole Milk 1L"
+              class="product-img"
+              loading="lazy"
+            />
+            <span class="product-badge">Best Seller</span>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Fresh Milk</p>
+            <h3 class="product-name">Whole Milk 1L</h3>
+            <p class="product-desc">Full-fat whole milk, rich in calcium and natural goodness.</p>
+            <a href="#" class="product-link">
+              Explore
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img
+              src="images/slide-1.jpg"
+              alt="Low-Fat Yogurt"
+              class="product-img"
+              loading="lazy"
+            />
+            <span class="product-badge new">New</span>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Yogurt</p>
+            <h3 class="product-name">Low-Fat Yogurt</h3>
+            <p class="product-desc">Creamy, light yogurt made from the finest fresh milk.</p>
+            <a href="#" class="product-link">
+              Explore
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img
+              src="images/slide-2.jpg"
+              alt="Fresh Orange Juice"
+              class="product-img"
+              loading="lazy"
+            />
+          </div>
+          <div class="product-info">
+            <p class="product-category">Juices</p>
+            <h3 class="product-name">Fresh Orange Juice</h3>
+            <p class="product-desc">Squeezed from sun-ripened oranges, no added sugar.</p>
+            <a href="#" class="product-link">
+              Explore
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img
+              src="images/slide-3.jpg"
+              alt="Berry Smoothie"
+              class="product-img"
+              loading="lazy"
+            />
+            <span class="product-badge promo">Promo</span>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Smoothies</p>
+            <h3 class="product-name">Mixed Berry Blend</h3>
+            <p class="product-desc">A vibrant mix of raspberries, blueberries, and strawberries.</p>
+            <a href="#" class="product-link">
+              Explore
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       BRAND STATS STRIP
+  ============================================================ -->
+  <section class="stats-strip" aria-label="Brand facts">
+    <div class="container">
+      <div class="stats-grid">
+
+        <div class="stat-item">
+          <span class="stat-number">130+</span>
+          <span class="stat-label">Years of Excellence</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+
+        <div class="stat-item">
+          <span class="stat-number">50+</span>
+          <span class="stat-label">Product Lines</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+
+        <div class="stat-item">
+          <span class="stat-number">30</span>
+          <span class="stat-label">Countries</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+
+        <div class="stat-item">
+          <span class="stat-number">10M+</span>
+          <span class="stat-label">Happy Families</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MAGAZINE / EDITORIAL SECTION
+  ============================================================ -->
+  <section class="section magazine-section" id="magazine">
+    <div class="container">
+
+      <div class="section-header">
+        <div>
+          <p class="section-eyebrow">From the Kitchen</p>
+          <h2 class="section-title">Latest Stories</h2>
+        </div>
+        <a href="#" class="btn-outline">All Articles</a>
+      </div>
+
+      <div class="magazine-grid">
+
+        <!-- Large feature article -->
+        <article class="mag-card mag-card--featured">
+          <div class="mag-img-wrap">
+            <img
+              src="images/magazine-1.jpg"
+              alt="Healthy breakfast bowl"
+              class="mag-img"
+              loading="lazy"
+            />
+            <div class="mag-overlay"></div>
+            <div class="mag-content-over">
+              <span class="mag-tag">Recipes</span>
+              <h3 class="mag-title">5 Ways to Start Your Morning Right</h3>
+              <p class="mag-meta">
+                <span>June 12, 2026</span>
+                <span class="dot-sep">Â·</span>
+                <span>4 min read</span>
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Two smaller articles stacked -->
+        <div class="mag-sidebar">
+
+          <article class="mag-card mag-card--small">
+            <div class="mag-img-wrap mag-img-wrap--small">
+              <img
+                src="images/magazine-2.jpg"
+                alt="Homemade pizza"
+                class="mag-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="mag-content">
+              <span class="mag-tag">Cooking Tips</span>
+              <h3 class="mag-title mag-title--sm">The Secret to a Creamy BÃ©chamel</h3>
+              <p class="mag-excerpt">
+                Learn the classic technique that turns an ordinary white sauce into something extraordinary.
+              </p>
+              <p class="mag-meta">
+                <span>May 28, 2026</span>
+                <span class="dot-sep">Â·</span>
+                <span>3 min read</span>
+              </p>
+            </div>
+          </article>
+
+          <article class="mag-card mag-card--small">
+            <div class="mag-img-wrap mag-img-wrap--small">
+              <img
+                src="images/magazine-3.jpg"
+                alt="Fresh berries"
+                class="mag-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="mag-content">
+              <span class="mag-tag">Nutrition</span>
+              <h3 class="mag-title mag-title--sm">Why Calcium Matters at Every Age</h3>
+              <p class="mag-excerpt">
+                From growing kids to active adults, calcium is one nutrient you simply can't skip.
+              </p>
+              <p class="mag-meta">
+                <span>May 14, 2026</span>
+                <span class="dot-sep">Â·</span>
+                <span>5 min read</span>
+              </p>
+            </div>
+          </article>
+
+        </div><!-- /.mag-sidebar -->
+
+      </div><!-- /.magazine-grid -->
+    </div>
+  </section>
+
+  <!-- ============================================================
+       OFFERS BANNER
+  ============================================================ -->
+  <section class="offers-banner" id="offers" aria-label="Current offer">
+    <div class="container">
+      <div class="offers-inner">
+        <div class="offers-text">
+          <p class="section-eyebrow light">Limited Time</p>
+          <h2 class="offers-heading">Summer Freshness Sale</h2>
+          <p class="offers-desc">
+            Enjoy up to <strong>20% off</strong> selected dairy and juice products. Available in-store and online â€” while stocks last.
+          </p>
+          <a href="#" class="btn-white">Shop the Sale</a>
+        </div>
+        <div class="offers-visual" aria-hidden="true">
+          <img
+            src="images/offers.jpg"
+            alt="Summer sale produce"
+            class="offers-img"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       NEWSLETTER
+  ============================================================ -->
+  <section class="newsletter-section" aria-label="Newsletter signup">
+    <div class="container">
+      <div class="newsletter-inner">
+        <div class="newsletter-text">
+          <h2 class="newsletter-heading">Stay Fresh</h2>
+          <p class="newsletter-sub">Get recipes, nutrition tips, and exclusive offers delivered to your inbox.</p>
+        </div>
+        <form class="newsletter-form" novalidate aria-label="Email signup">
+          <label for="emailInput" class="sr-only">Email address</label>
+          <input
+            type="email"
+            id="emailInput"
+            name="email"
+            class="newsletter-input"
+            placeholder="Your email address"
+            autocomplete="email"
+            required
+          />
+          <button type="submit" class="newsletter-btn">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <!-- Brand column -->
+        <div class="footer-col footer-brand-col">
+          <a href="#" class="footer-logo-link" aria-label="Tanova Kitchen home">
+            <div class="footer-logo-wrap">
+              <img src="images/My Logo.png" alt="Tanova Kitchen" class="footer-logo" />
+              <div class="footer-logo-text">
+                <span class="footer-logo-name">Tanova</span>
+                <span class="footer-logo-sub">Kitchen</span>
+              </div>
+            </div>
+          </a>
+          <p class="footer-tagline">
+            Bringing freshness and quality to your table since 1895.
+          </p>
+          <!-- Social icons -->
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.4a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Products column -->
+        <div class="footer-col">
+          <h3 class="footer-heading">Products</h3>
+          <ul class="footer-links">
+            <li><a href="#">Fresh Milk</a></li>
+            <li><a href="#">Yogurt</a></li>
+            <li><a href="#">Cheese</a></li>
+            <li><a href="#">Butter &amp; Cream</a></li>
+            <li><a href="#">Juices &amp; Drinks</a></li>
+          </ul>
+        </div>
+
+        <!-- Company column -->
+        <div class="footer-col">
+          <h3 class="footer-heading">Company</h3>
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Our Brands</a></li>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press Room</a></li>
+          </ul>
+        </div>
+
+        <!-- Help column -->
+        <div class="footer-col">
+          <h3 class="footer-heading">Help</h3>
+          <ul class="footer-links">
+            <li><a href="#">Customer Support</a></li>
+            <li><a href="#">Find a Store</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+      </div><!-- /.footer-grid -->
+
+      <!-- Bottom bar -->
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Tanova Kitchen. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Cookie Settings</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+
